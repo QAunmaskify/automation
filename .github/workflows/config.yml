@@ -1,15 +1,14 @@
 name: JavaScript Automation
 on:
-    push:
-        branches:
-            - master
-    pull_request:
-        type: [opened, closed]
+  push:
+    branches:
+      - master
+  pull_request:
+    type: [opened, closed]
 
 jobs:
-    Test-Pipeline:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Clone and Checkout Repository
-              uses: actions/checkout@v2
-
+  Test-Pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone and Checkout Repository
+        uses: actions/checkout@v2
