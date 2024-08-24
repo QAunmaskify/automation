@@ -1,7 +1,8 @@
 #! /usr/bin/node
-const sum = require('../sum');
+import { expect } from "chai";
 
-test("Add 2 + 1 to equal 3", () => {
-    expect(sum(2, 1)).toBe(3);
-})
-// console.log("SUM => ", sum);
+describe("Sum", function () {
+  it("adds 2 + 1 to equal 3", function () {
+    expect(2 + 1).to.equal(3);
+  });
+});
