@@ -1,31 +1,31 @@
-const globals = require('globals');
-const jest = require('eslint-plugin-jest');
+import globals from "globals";
+import eslintJs from "@eslint/js";
+import mocha from "eslint-plugin-mocha";
 
-module.exports = [
-  
-  require('@eslint/js')['configs']['recommended'],  
+export default [
+  eslintJs.configs.recommended,
   {
     files: ["**/*.js"],
     languageOptions: {
       ecmaVersion: 2024,
-      sourceType: "commonjs",
+      sourceType: "module",
       globals: {
-        ...globals.jest,
-        ...globals.node
-      }
+        ...globals.mocha,
+        ...globals.chai,
+        ...globals.node,
+      },
     },
-    
+
     rules: {
-      "prefer-const": "error"
-    }
+      "prefer-const": "error",
+    },
   },
   {
-    files: ['test/*.test.js'],
-    ...jest.configs['flat/all'],
-    plugins: { jest },
+    files: ["test/*.test.js"],
+    plugins: { mocha },
     rules: {
-      ...jest.configs['flat/all'].rules,
-      "jest/prefer-importing-jest-globals": "off",
+      ...mocha.configs.recommended.rules,
+      // "jest/prefer-importing-jest-globals": "off",
     },
   },
 ];
