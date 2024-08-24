@@ -3,9 +3,10 @@
     "lint-check": "npx eslint",
     "lint:fix": "npx eslint --fix",
     "dev": "npx babel",
-    "test": "jest",
-    "full-test": "npx eslint && jest"
+    "test": "mocha",
+    "full-test": "npx eslint && mocha"
   },
+  "type": "module",
   "devDependencies": {
     "@babel/cli": "^7.24.8",
     "@babel/core": "^7.25.2",
