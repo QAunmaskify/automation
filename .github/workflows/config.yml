@@ -15,4 +15,5 @@ jobs:
 
       - name: Run tests
         run: |
+          pwd
           npm test
