@@ -16,8 +16,5 @@ jobs:
       - name: Run tests
         run: |
           cd backend-javascript
-          ls -l
-          echo "=============================="
           npm install > /dev/null 2>&1
-          echo "=============================="
           npm test
