@@ -3,8 +3,8 @@
     "lint-check": "npx eslint",
     "lint:fix": "npx eslint --fix",
     "dev": "npx babel",
-    "test": "mocha",
-    "full-test": "npx eslint && mocha"
+    "test": "mocha tests",
+    "full-test": "npx eslint && mocha tests"
   },
   "type": "module",
   "devDependencies": {
