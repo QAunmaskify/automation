@@ -18,6 +18,6 @@ jobs:
           cd backend-javascript
           ls -l
           echo "=============================="
-          npm install
+          npm install >> /dev/null
           echo "=============================="
           npm test
