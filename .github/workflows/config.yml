@@ -17,4 +17,6 @@ jobs:
         run: |
           cd backend-javascript
           ls -l
+          echo "=============================="
+          npm install
           npm test
